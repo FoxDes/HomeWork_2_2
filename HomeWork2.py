@@ -39,24 +39,15 @@
 # -> [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
 # -> 15
 
-from calendar import c
-
-
 a = int(input("Введите число: "))
-b = int(input("Введите число начала произведения: "))
-с = int(input("Введите число окончания произведения: "))
+x_1 = int(input("Введите число начала произведения: "))
+x_2 = int(input("Введите число окончания произведения: "))
 list = []
-works = b
-for i in range(-a,a+1):
+for i in range(-a, a+1):
     list.append(i)
 print(list)
 
-for i in list(+b, -c):
-    works *= list[b]+1
-    print(works)
+len_list = len(list)
+if len_list >= x_1 > 0 and len_list >= x_2 > 0:
+    print(list[x_1 - 1] * list[x_2 - 1])
 
-
-# 5. ** Реализуйте алгоритм перемешивания списка. Без функции shuffle из модуля random.
-# 10
-# -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-# -> [0, 7, 6, 3, 4, 2, 9, 5, 1, 8]
